@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Play Cric</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div id="header">
+      <h1>LET'S PLAY CRIC </h1>
+    </div>
+    <!----------------------------------------------------------------- -->
+      
+    <div id="selectionScreen">
+      <h2>Select Your Team</h2>
+      <div id="your-team">
+        <button class="team-btn" data-item="CSK">CSK</button>
+        <button class="team-btn" data-item="MI">MI</button>
+        <button class="team-btn" data-item="RCB">RCB</button>
+        <button class="team-btn" data-item="KKR">KKR</button>
+        <button class="team-btn" data-item="RR">RR</button>
+        <button class="team-btn" data-item="LSG">LSG</button>
+        <button class="team-btn" data-item="GT">GT</button>
+        <button class="team-btn" data-item="DC">DC</button>
+        <button class="team-btn" data-item="PBKS">PBKS</button>
+        <button class="team-btn" data-item="SRH">SRH</button>
+      </div>
+
+      <h2>Select Opponent Team</h2>
+      <div id="opp-team">
+        <button class="team-btn" data-item="CSK">CSK</button>
+        <button class="team-btn" data-item="MI">MI</button>
+        <button class="team-btn" data-item="RCB">RCB</button>
+        <button class="team-btn" data-item="KKR">KKR</button>
+        <button class="team-btn" data-item="RR">RR</button>
+        <button class="team-btn" data-item="LSG">LSG</button>
+        <button class="team-btn" data-item="GT">GT</button>
+        <button class="team-btn" data-item="DC">DC</button>
+        <button class="team-btn" data-item="PBKS">PBKS</button>
+        <button class="team-btn" data-item="SRH">SRH</button>
+      </div>
+
+      <div id="Team">
+        <p id="team-1"></p>
+        <p>Vs</p>
+        <p id="team-2"></p>
+      </div>
+      <button onclick="goToToss()">Go to toss</button>
+    </div>
+    <!----------------------------------------------------------------- -->
+    <div id="coin-toss">
+      <h2>Toss</h2>
+      <h3>Touch the button below</h3>
+      <div id="matchToss">
+        <p id="my-Team"></p>
+        <p>Vs</p>
+        <p id="opp-Team"></p>
+      </div>
+      <div id="head-or-tail">
+        <p>Choose Head or Tail</p>
+        <button onclick="choice('head')">Head</button>
+        <button onclick="choice('tail')">Tail</button>
+      </div>
+      <div id="winner"></div>
+      <button id="flip" onclick="toss()">Flip</button>
+
+      <div id="bat-Or-bowl">
+        <button class="decision" data-item="bat">Bat</button>
+        <button class="decision" data-item="bowl">Bowl</button>
+      </div>
+
+      <h3 id="toss-result"></h3>
+      <button id="start-the-match">START THE MATCH</button>
+    </div>
+    <!----------------------------------------------------------------- -->
+    <div id="matchPage">
+      <h1 id="matchpage-header"></h1>
+
+      <div id="targetScore"></div>
+
+      <div class="teams">
+        <div class="team team1" id="battingTeam">Team 1 Batting</div>
+
+        <div id="battingOutput"></div>
+
+        <div class="team team2" id="bowlingTeam">Team 2 Bowling</div>
+      </div>
+      <div class="buttons">
+        <button onclick="startMatch()">Start Match</button>
+        <button id="playBtn" onclick="playBall()">Play Ball</button>
+        <button id="nextBtn" onclick="nextTeam()">Next Team</button>
+      </div>
+    </div>
+    <!----------------------------------------------------------------- -->
+    <div id="resultPage">
+      <h1 id="winnerText"></h1>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
