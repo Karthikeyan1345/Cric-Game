@@ -152,7 +152,7 @@ function playBall() {
 
   if (ball === "wide") {
     totalRuns += 1;
-    writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets," wide");
+    writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets +" - WIDE"," wide");
     if(chaseScore!=-1 && totalRuns>=chaseScore){
         finishInnings();
         return;
@@ -160,7 +160,7 @@ function playBall() {
   }
   else if (ball === "noball") {
     totalRuns += (1+run);
-    writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets,"extra");
+    writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets+" - NO BALL !! "+run+" Runs","extra");
         if(chaseScore!=-1 && totalRuns>=chaseScore){
         finishInnings();
         return;
@@ -168,7 +168,7 @@ function playBall() {
   }
   else if (ball === "wicket") {
     wickets++;
-    writeLine("Ball "+ballNo+": WICKET "+totalRuns +" / "+wickets,"wicket");
+    writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets+" - WICKET","wicket");
         if(chaseScore!=-1 && totalRuns>=chaseScore){
         finishInnings();
         return;
@@ -177,7 +177,7 @@ function playBall() {
   }
   else {
     totalRuns += run;
-    writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets,"run");
+    writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets+" - "+run+" Runs","run");
     if(chaseScore!=-1 && totalRuns>=chaseScore){
         finishInnings();
         return;
@@ -202,8 +202,8 @@ function finishInnings() {
 
     setTimeout(function () {
       window.location.href =
-         "result.html?team1=" + team1Score + "&team2=" + team2Score;
-    }, 3000);
+         "result.html?team1=" + team1Score + "&team2=" + team2Score + "&team1Name="+batting + "&team2Name="+bowling;
+    }, 2000);
   }
 }
 
