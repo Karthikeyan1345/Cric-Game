@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Toss</title>
+
+</head>
+<body>
+    <h1 id="header">LET'S PLAY CRIC 🏏</h1>
+
+     <div id="coin-toss">
+      <h2>Toss</h2>
+      <h3>Touch the button below</h3>
+      <div id="matchToss">
+        <p id="my-Team"></p>
+        <p>Vs</p>
+        <p id="opp-Team"></p>
+      </div>
+      <div id="head-or-tail">
+        <p>Choose Head or Tail</p>
+        <button onclick="choice('head')">Head</button>
+        <button onclick="choice('tail')">Tail</button>
+      </div>
+      <br>
+      <div id="winner"></div>
+      <button id="flip" onclick="toss()">Flip</button>
+
+      <div id="bat-Or-bowl">
+        <button class="decision" data-item="bat">Bat</button>
+        <button class="decision" data-item="bowl">Bowl</button>
+      </div>
+
+      <h3 id="toss-result"></h3>
+      <button class="go-to-match-page" id="start-the-match" >START THE MATCH</button>
+    </div>
+    <script src="coinScript.js"></script>
+</body>
+</html>

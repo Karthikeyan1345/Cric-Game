@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Match</title>
+  </head>
+  <body>
+    <h1 id="header">LET'S PLAY CRIC 🏏</h1>
+    <div id="matchPage">
+      <h1 id="matchpage-header"></h1>
+
+      <div id="targetScore"></div>
+
+      <div class="teams">
+        <div class="team team1" id="battingTeam">Team 1 Batting</div>
+
+        <div id="battingOutput"></div>
+
+        <div class="team team2" id="bowlingTeam">Team 2 Bowling</div>
+      </div>
+      <div class="buttons">
+        <button id="startbutton" onclick="startMatch()">Start Match</button>
+        <button id="playBtn" onclick="playBall()">Play Ball</button>
+        <button id="nextBtn" onclick="nextTeam()">Next Team</button>
+      </div>
+    </div>
+    <script src="matchScript.js"></script>
+  </body>
+</html>

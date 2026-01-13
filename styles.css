@@ -1,29 +1,43 @@
-body {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #eeeeee;
+*{
+   background: #eeeeee;
+   font-family:Arial, Helvetica, sans-serif
+   
+  }
+  body{
+    box-sizing: border-box;  
     transition: smooth;
+    text-align: center;
     gap:20px;
 }
-
+  
 .buttons {
   display: flex;
   justify-content: center;
   gap: 12px;
 }
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
 #header{
-    background-color: aqua;
-    margin:0%;
-    padding: 0;
+  background-color: aqua;
+  padding: 20px;
+  margin-top: 0;
+}
+.page-content {
+  margin-top: 80px;
 }
 #selectionScreen {
   align-items: center;
-  margin-top: 10%;
-  margin-left: 25%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
   height: 50%;
   width: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   padding: 20px;
 }
 
@@ -62,13 +76,14 @@ body {
 }
 
 #coin-toss {
-  display: none;
-  height:30%;
+  height:50%;
   width:50%;
   padding:50px;
+  transition: smooth;
+  margin-top:  auto;
   margin-left:auto;
   margin-right: auto;
-  margin-top:auto;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 #matchToss {
@@ -82,19 +97,18 @@ body {
 }
 
 #matchPage {
-  display:none;
   font-family: Arial, sans-serif;
-  background: #eeeeee;
+  transition: smooth;
+  /* background: #eeeeee; */
   min-height: 100vh;
 }
-
 
 #matchPage {
   width: 90%;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  background: white;
+  /* background: white; */
   padding: 25px;
   border-radius: 14px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
@@ -159,6 +173,7 @@ body {
 .extra { color: orange; }
 .wicket { color: red; }
 .end { color: blue; }
+.freehit{color:rgb(91, 7, 112)}
 
 
 button {
@@ -170,7 +185,13 @@ button {
 
 /* Result page */
 .resultBox {
-  background: white;
+  /* background: white; */
+  margin-bottom: auto;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: smooth;
+  width: 50%;
   padding: 40px;
   border-radius: 14px;
   text-align: center;
