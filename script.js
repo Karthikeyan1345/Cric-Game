@@ -27,3 +27,4 @@ document.querySelector("#selectionScreen .toss-btn").addEventListener("click",()
   window.location.href=
    "coin-toss.html?team1Name=" + team1 + "&team2Name=" + team2 ;
 })
+

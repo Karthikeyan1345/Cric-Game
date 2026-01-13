@@ -106,8 +106,10 @@ function playBall() {
         }
     }
     else if (ball === "wicket") {
-        wickets++;
-       if(freehit==false) writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets+" - WICKET","wicket");
+        if(freehit==false){
+           wickets++;
+           writeLine("Ball "+ballNo+": "+totalRuns +" / "+wickets+" - WICKET","wicket");
+       }
        else{ 
         if(run>=0 && run <=3){
              totalRuns+=run;
