@@ -50,6 +50,7 @@ document.getElementById("matchpage-header").innerText=batting+" Vs "+bowling;
 
 
 let playBtn = document.getElementById("playBtn");
+playBtn.style.display="none";
 let nextBtn = document.getElementById("nextBtn");
 nextBtn.style.display = "none";
 
@@ -63,6 +64,7 @@ function writeLine(text, cls) {
 
 function startMatch() {
   document.getElementById("startbutton").style.display="none";
+  playBtn.style.display="block";
   currentTeam = 1;
   team1Score = 0;
   team2Score = 0;

@@ -1,5 +1,5 @@
-let team1 = "CSK";
-let team2 = "KKR";
+let team1;
+let team2;
 
 
 document.querySelectorAll("#your-team .team-btn").forEach((btn) => {
@@ -13,6 +13,11 @@ document.querySelectorAll("#your-team .team-btn").forEach((btn) => {
 
 document.querySelectorAll("#opp-team .team-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
+    if(team1==undefined){
+      alert("Please select your team")
+      return;
+    }
+
     const selected = btn.dataset.item;
     if (selected == team1) {
       alert("Please select different Opponent");
@@ -24,6 +29,10 @@ document.querySelectorAll("#opp-team .team-btn").forEach((btn) => {
 });
 
 document.querySelector("#selectionScreen .toss-btn").addEventListener("click",()=>{
+  if(team1==undefined || team2==undefined ){
+    alert("Please select the teams!");
+    return;
+  }
   window.location.href=
    "coin-toss.html?team1Name=" + team1 + "&team2Name=" + team2 ;
 })
